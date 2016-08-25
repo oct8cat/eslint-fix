@@ -1,0 +1,30 @@
+{
+  "name": "eslint-fix",
+  "version": "1.0.0",
+  "keywords": [
+    "eslint",
+    "lint"
+  ],
+  "author": "Sergey Elsukov <oct8cat@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "*"
+  },
+  "bin": {
+    "eslint-fix": "bin/eslint-fix.js"
+  },
+  "devDependencies": {},
+  "description": "Executes `eslint --fix` on `stdin`, writes fixed output to `stdout`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oct8cat/eslint-fix.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oct8cat/eslint-fix/issues"
+  },
+  "homepage": "https://github.com/oct8cat/eslint-fix#readme"
+}
