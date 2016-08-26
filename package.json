@@ -7,15 +7,16 @@
   ],
   "author": "Sergey Elsukov <oct8cat@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "eslint": "*"
-  },
+  "dependencies": {},
   "bin": {
     "eslint-fix": "bin/eslint-fix.js"
   },
   "devDependencies": {},
   "description": "Executes `eslint --fix` on `stdin`, writes fixed output to `stdout`",
   "main": "index.js",
+  "peerDependencies": {
+    "eslint": "*"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
