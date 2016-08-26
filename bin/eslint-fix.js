@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 
-var CLIEngine = require('eslint').CLIEngine
-
 var input = ''
 process.stdin.on('data', function(data) {
     input += data
 }).on('end', function() {
-    var cliEngine = new CLIEngine({fix: true})
-    var report, output
+    var CLIEngine, cliEngine, report, output
     try {
+        CLIEngine = require('eslint').CLIEngine
+        cliEngine = new CLIEngine({fix: true})
         report = cliEngine.executeOnText(input)
         output = report.results[0].output
     } catch (err) {
-        // Missing `.eslintc` or whatnot
+        // Missing `eslint`, `.eslintrc`
         // process.stderr.write(err)
+        output = `// eslint-fix ¯\\(°_o)/¯: ${err}\r\n${input}`
     }
-    process.stdout.write(output || input)
+    process.stdout.write(output)
 })

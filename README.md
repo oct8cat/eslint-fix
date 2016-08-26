@@ -1,6 +1,6 @@
 ## Installation
 
-`npm i -g eslint-fix`
+`npm i -g eslint eslint-fix`
 
 ## Usage
 
