@@ -10,6 +10,11 @@ process.stdin.on('data', function(data) {
         cliEngine = new CLIEngine({fix: true})
         report = cliEngine.executeOnText(input)
         output = report.results[0].output
+
+        if (!output) {
+          // if no fixes were made, output is undefined
+          output = input
+        }
     } catch (err) {
         // Missing `eslint`, `.eslintrc`
         // process.stderr.write(err)
